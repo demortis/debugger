@@ -1,0 +1,149 @@
+#debug-panel-content table{
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+#debug-panel-content thead th {
+    white-space: nowrap;
+}
+
+#debug-panel-content thead th[data-action=sort] {
+    cursor: pointer;
+    color: #0089ff;
+}
+
+#debug-panel-content thead th[data-sort-direction]:after {
+    display: inline-block;
+    content: "";
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    margin: 0 0 0 5px;
+}
+#debug-panel-content thead th[data-sort-direction='0']:after {
+    margin-bottom: -3px;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #fff;
+}
+#debug-panel-content thead th[data-sort-direction='1']:after {
+    margin-bottom: 2px;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #000;
+}
+
+#debug-panel-content table, #debug-panel-content th, #debug-panel-content td{
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+}
+
+#debug-panel-content table tr td, #debug-panel-content table tr th{
+    padding: 10px;
+}
+
+#debug-panel-content table tbody > tr:nth-child(even){
+    background-color: #efefef;
+}
+
+#debug-panel-content table a.button {
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    background: #ddd;
+    color: #565656 !important;
+    display: inline;
+    text-shadow: none;
+    border:none;
+}
+#debug-panel-content table a.button.active {
+    border: 3px solid #ffffff;
+    box-shadow: 0 1px 6px 1px #949494;
+}
+
+#debug-panel-content table a.button.button-select{
+    background-color: #6ebd71;
+    color:#fff !important;
+}
+
+#debug-panel-content table a.button.button-update{
+    background-color: #ead32d;
+    color:#fff;
+}
+
+#debug-panel-content table a.button.button-insert{
+    background-color: #ff8e8e;
+}
+
+#debug-panel-content table a.button.button-replace{
+    background-color: #5ec4f5;
+}
+
+#debug-panel-content table a.button.button-undefined{
+    background-color: #ffffff;
+    border:1px solid #ddd;
+}
+
+#debug-panel-content tbody tr a.button{
+    float:right;
+    margin:0;
+    font-size: 13px;
+    text-shadow: none;
+}
+
+#debug-panel-content tbody tr a.button:hover{
+    background-color: #b9b9b9;
+}
+
+#debug-panel-content tr a.query-error{
+    display: inline-block;
+    float: right;
+    background-color: #fa2b26;
+    color: #ffdcdb;
+    text-align: center;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 2px 10px;
+}
+
+#debug-panel-content tr a.query-error:hover:before {
+    content: attr(data-exception-text);
+}
+
+#debug-panel-content tr a.query-error:before {
+    content: attr(data-exception-name);
+}
+
+#debug-panel-content tr td.query {
+    position: relative;
+}
+
+#debug-panel-content tr span.mark {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 3px;
+    width: 64px;
+    background: #6ebd71;
+}
+
+#debug-panel-content tr[data-query-type=select] span.mark{
+    background-color: #6ebd71;
+}
+
+#debug-panel-content tr[data-query-type=update] span.mark{
+    background-color: #ead32d;
+}
+
+#debug-panel-content tr[data-query-type=insert] span.mark{
+    background-color: #ff8e8e;
+}
+
+#debug-panel-content tr[data-query-type=replace] span.mark{
+    background-color: #5ec4f5;
+}
+
+#debug-panel-content tr[data-query-type=undefined] span.mark{
+    background-color: #ffffff;
+}

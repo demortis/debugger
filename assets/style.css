@@ -1,0 +1,158 @@
+#debug-panel {
+    font-family: 'Arial', sans-serif;
+    border-radius: 4px;
+    background: #fff;
+}
+
+#debug-panel.minimized {
+    height: 38px;
+}
+
+#debug-panel.closed {
+    width: 250px;
+    height: 38px;
+}
+
+#debug-control-panel {
+    text-align: right;
+    background-color: #fa2b26;
+    padding: 10px;
+}
+
+#debug-control-panel > div.header {
+    display: inline-block;
+    float: left;
+    color: #fff;
+    font-size: 20px;
+}
+
+#debug-control-panel a {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 5px;
+}
+
+#debug-control-panel a:hover {
+    opacity: .61;
+}
+
+#debug-control-panel:hover #debug-panel-resize {
+    display: block;
+}
+
+#debug-panel-resize {
+    position: absolute;
+    display: none;
+    height: 7px;
+    background-color: #b90400;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: s-resize;
+}
+
+#debug-panel-content {
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+#debug-panel-tabs {
+    margin: 15px 15px 5px 25px;
+}
+
+#debug-panel-tabs a {
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 5px 5px 0 0;
+}
+
+#debug-panel-tabs a:hover {
+    background: #ddd;
+}
+
+#debug-panel-tabs a.active {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: #64c9f3;
+    color: #fff;
+}
+
+#debug-exception p.message {
+    border-radius: 6px;
+    font-size: 20px;
+    background: #ffbcbb;
+    padding: 15px;
+}
+
+#debug-exception p.message i{
+    display: inline-block;
+    padding: 10px;
+    background: #fa2b26;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 27px;
+    font-style: inherit;
+    margin-right: 15px;
+}
+
+#debug-exception div.exception-row > a {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin: 3px 0;
+    display: block;
+    text-decoration: none;
+    color: #292929;
+    background-color: #ffc56e;
+    transition: all 200ms ease-in-out;
+}
+
+#debug-exception div.exception-row > a:hover {
+    box-shadow: 1px 3px 10px -3px #636363;
+    background-color: #ff9900;
+    border-color: #eaeaea;
+}
+
+#debug-exception div.exception-row > a span {
+    display: block;
+    text-align: right;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+#debug-exception div.exception-stack-trace {
+    padding: 0 50px;
+}
+
+#debug-exception div.exception-stack-trace div.exception-stack-trace-row {
+    padding: 7px 20px;
+}
+
+#debug-exception div.exception-stack-trace div.exception-stack-trace-row p {
+    margin: 0;
+}
+
+#debug-exception div.exception-stack-trace div.exception-stack-trace-row:nth-child(odd){
+    background-color: #ddd;
+}
+
+#debug-exception div.exception-stack-trace, #debug-exception input[type=checkbox] {
+    display: none;
+}
+
+#debug-exception input[type=checkbox]:checked + div.exception-stack-trace {
+    display: block;
+}
